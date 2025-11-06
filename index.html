@@ -27,3 +27,101 @@
     <script src="renderer.js"></script>
   </body>
 </html>
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Multi AI Account Switcher</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="sidebar">
+      <div class="header">
+        <h1>AI Accounts</h1>
+        <p class="subtitle">Switch between your AI services instantly</p>
+      </div>
+
+      <!-- AI Service Tabs -->
+      <div id="service-tabs">
+        <button class="service-tab active" data-service="claude">
+          <span class="tab-icon">🤖</span>
+          <span>Claude</span>
+        </button>
+        <button class="service-tab" data-service="chatgpt">
+          <span class="tab-icon">💬</span>
+          <span>ChatGPT</span>
+        </button>
+        <button class="service-tab" data-service="gemini">
+          <span class="tab-icon">✨</span>
+          <span>Gemini</span>
+        </button>
+        <button class="service-tab" data-service="other">
+          <span class="tab-icon">🔧</span>
+          <span>Other</span>
+        </button>
+      </div>
+
+      <!-- Account Lists -->
+      <div id="accounts-container">
+        <div class="service-accounts active" data-service="claude">
+          <div class="account-list"></div>
+        </div>
+        <div class="service-accounts" data-service="chatgpt">
+          <div class="account-list"></div>
+        </div>
+        <div class="service-accounts" data-service="gemini">
+          <div class="account-list"></div>
+        </div>
+        <div class="service-accounts" data-service="other">
+          <div class="account-list"></div>
+        </div>
+      </div>
+
+      <!-- Add Account Form -->
+      <div id="controls">
+        <div class="control-header">
+          <h3>Add New Account</h3>
+        </div>
+        <select id="acct-service">
+          <option value="claude">Claude</option>
+          <option value="chatgpt">ChatGPT</option>
+          <option value="gemini">Gemini</option>
+          <option value="other">Other</option>
+        </select>
+        <input id="acct-name" placeholder="Display name (e.g., Work Account)" />
+        <input id="acct-url" placeholder="Login URL (https://...)" />
+        <button id="add-btn">
+          <span>+ Add Account</span>
+        </button>
+        <p class="hint">💡 Tip: Sign in once using "Login" button, then switch instantly</p>
+      </div>
+    </div>
+
+    <div id="main">
+      <div id="welcome-screen">
+        <div class="welcome-content">
+          <div class="welcome-icon">🚀</div>
+          <h2>Welcome to Multi AI Switcher</h2>
+          <p>Add your AI accounts to get started</p>
+          <div class="welcome-steps">
+            <div class="step">
+              <span class="step-number">1</span>
+              <span>Add an account with its login URL</span>
+            </div>
+            <div class="step">
+              <span class="step-number">2</span>
+              <span>Click "Login" to sign in once</span>
+            </div>
+            <div class="step">
+              <span class="step-number">3</span>
+              <span>Click "Open" to instantly switch between accounts</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
