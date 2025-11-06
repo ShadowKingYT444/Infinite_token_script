@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Multi AI Account Switcher</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="sidebar">
+      <h2>Accounts</h2>
+      <div id="account-list"></div>
+
+      <div id="controls">
+        <input id="acct-name" placeholder="Display name (e.g. Claude A)" />
+        <input id="acct-url" placeholder="Login URL (https://...)" />
+        <button id="add-btn">Add account</button>
+        <p class="hint">Add any AI service login URL (Claude, ChatGPT, Gemini).</p>
+      </div>
+    </div>
+
+    <div id="main">
+      <div id="popup-instructions">
+        Add an account and click "Open" to sign in. After signing in once, switch instantly here.
+      </div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
